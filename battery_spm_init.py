@@ -92,7 +92,9 @@ class pars:
 
     # Electronic and ionic resistivities (ohm-m):
     R_el_an = 1/sigma_el_graphite/eps_graphite
+    # print('R_el_an',R_el_an)
     R_io_an = 1/sigma_io_elyte/(1-eps_graphite)
+    # print('R_io_an', R_io_an)
     R_io_elyte = 1/sigma_io_elyte/eps_elyte_sep
     R_io_ca = 1/sigma_io_elyte/(1-eps_LCO)
     R_el_ca = 1/sigma_el_LCO/eps_LCO

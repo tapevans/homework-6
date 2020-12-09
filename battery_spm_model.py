@@ -14,7 +14,7 @@ def cycle(C_rate = None, thermal_flags=None):
         t_fac = 1.0
 
     if not thermal_flags:
-         #Class of flags to turn certain thermal source/sink terms on 
+         # Class of flags to turn certain thermal source/sink terms on
          # (flag = 1) and off (flag = 0).  Default is 'on'
          class thermal_flags:
             rxn = 1 # heat due to surface reactions
@@ -31,6 +31,7 @@ def cycle(C_rate = None, thermal_flags=None):
 
     return solution
 
+
 if __name__ == '__main__':
     
     # Run the model, using the parameters in the `inputs.py` file:
@@ -39,9 +40,9 @@ if __name__ == '__main__':
     # If running this from the command line, make and print some simple plots:
     from matplotlib import pyplot as plt
 
-    plt.plot(solution.t,solution.y[ptr.T_an,:])
-    plt.plot(solution.t,solution.y[ptr.T_elyte,:])
-    plt.plot(solution.t,solution.y[ptr.T_ca,:])
+    plt.plot(solution.t, solution.y[ptr.T_an, :])
+    plt.plot(solution.t, solution.y[ptr.T_elyte, :])
+    plt.plot(solution.t, solution.y[ptr.T_ca, :])
         
-    plt.legend(['Anode temperature','Separator temperature', 'Cathode temperature'])
+    plt.legend(['Anode temperature', 'Separator temperature', 'Cathode temperature'])
     plt.show()
